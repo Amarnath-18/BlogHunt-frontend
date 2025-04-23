@@ -204,15 +204,21 @@ const Navbar = () => {
         {isMobileMenuOpen && (
           <div className="md:hidden py-4 border-t">
             <div className="px-4 mb-4">
-              <div className="flex items-center gap-3">
-                <ProfileIcon className="size-10" />
-                <div>
-                  <div className="font-medium">{user?.firstName} {user?.lastName}</div>
-                  <div className="text-sm text-muted-foreground truncate">
-                    {user?.email}
+              {user ? (
+                <div className="flex items-center gap-3">
+                  <ProfileIcon className="size-10" />
+                  <div>
+                    <div className="font-medium">{user.firstName} {user.lastName}</div>
+                    <div className="text-sm text-muted-foreground truncate">
+                      {user.email}
+                    </div>
                   </div>
                 </div>
-              </div>
+              ) : (
+                <div className="text-muted-foreground">
+                  Sign in to get started
+                </div>
+              )}
             </div>
             <div className="flex flex-col gap-4">
               {navItems.map((item) => (
