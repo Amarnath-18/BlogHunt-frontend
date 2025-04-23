@@ -43,7 +43,6 @@ const Navbar = () => {
       dispatch(setUser(null))
       navigate('/')
     } catch (error) {
-      console.error('Logout failed:', error)
     }
   }
 
@@ -54,7 +53,7 @@ const Navbar = () => {
       return (
         <div className={cn("w-8 h-8 rounded-full overflow-hidden", className)}>
           <img 
-            src={user.profilePic} 
+            src={user?.profilePic} 
             alt="Profile" 
             className="w-full h-full object-cover"
           />
@@ -117,9 +116,9 @@ const Navbar = () => {
                           <div className="flex items-center gap-2">
                             <ProfileIcon className="size-8" />
                             <div className="text-sm">
-                              <div className="font-medium">{user.firstName} {user.lastName}</div>
+                              <div className="font-medium">{user?.firstName} {user?.lastName}</div>
                               <div className="text-muted-foreground text-xs truncate">
-                                {user.email}
+                                {user?.email}
                               </div>
                             </div>
                           </div>
@@ -208,9 +207,9 @@ const Navbar = () => {
               <div className="flex items-center gap-3">
                 <ProfileIcon className="size-10" />
                 <div>
-                  <div className="font-medium">{user.firstName} {user.lastName}</div>
+                  <div className="font-medium">{user?.firstName} {user?.lastName}</div>
                   <div className="text-sm text-muted-foreground truncate">
-                    {user.email}
+                    {user?.email}
                   </div>
                 </div>
               </div>
