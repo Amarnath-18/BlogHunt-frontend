@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'https://blog-hunt-backend.vercel.app/api',  // Replace with your actual backend URL
+  baseURL: 'https://bloghunt-backend.onrender.com/api',  // Replace with your actual backend URL
   withCredentials: true,
   headers: {
     'Content-Type': 'application/json',
