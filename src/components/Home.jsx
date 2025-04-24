@@ -29,7 +29,7 @@ const Home = () => {
 
             <p className="text-lg sm:text-xl text-muted-foreground mb-10 leading-relaxed animate-fade-up animate-delay-300">
               Join our community of creative minds. Write, share, and connect
-              with readers from around the globe on Bloggy's modern blogging
+              with readers from around the globe on BlogHunt's modern blogging
               platform.
             </p>
 
@@ -116,7 +116,7 @@ const Home = () => {
       <div className="bg-muted/30 py-24">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 animate-fade-down">
-            <h2 className="text-3xl font-bold mb-4">Why Choose Bloggy?</h2>
+            <h2 className="text-3xl font-bold mb-4">Why Choose BlogHunt?</h2>
             <p className="text-muted-foreground">
               Everything you need to create amazing content
             </p>
@@ -167,7 +167,7 @@ const Home = () => {
             Ready to Share Your Story?
           </h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Join thousands of writers who have already made Bloggy their home
+            Join thousands of writers who have already made BlogHunt their home
             for creative expression.
           </p>
           <Link to="/writeBlog">
