@@ -5,6 +5,7 @@ import api from '@/lib/axios'
 import { cn } from '@/lib/utils'
 import { UserCircle } from 'lucide-react'
 import ConfirmationDialog from '@/components/ui/ConfirmationDialog'
+import { Analytics } from "@vercel/analytics/react"
 
 const ViewSingleBlog = () => {
   const { id } = useParams()
@@ -38,6 +39,11 @@ const ViewSingleBlog = () => {
       const response = await api.put(`/blogs/like/${id}`);
       if (response.data.success) {
         setBlog(response.data.data);
+        // Track like event
+        Analytics.track('Blog Liked', {
+          blogId: id,
+          userId: user?._id
+        });
       }
     } catch (err) {
       console.error('Failed to like blog:', err);
