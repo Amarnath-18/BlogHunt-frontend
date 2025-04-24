@@ -120,7 +120,7 @@ const WriteBlog = () => {
             )}
             required
             minLength={5}
-            maxLength={1000}
+            maxLength={10000}
           />
         </div>
 

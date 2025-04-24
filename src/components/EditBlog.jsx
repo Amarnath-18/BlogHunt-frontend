@@ -139,7 +139,7 @@ const EditBlog = () => {
             )}
             required
             minLength={5}
-            maxLength={1000}
+            maxLength={10000}
             rows={6}
           />
         </div>
@@ -191,4 +191,5 @@ const EditBlog = () => {
 }
 
 export default EditBlog
+
 
