@@ -53,22 +53,22 @@ const Footer = () => {
             <h3 className="font-semibold mb-4">Categories</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/category/tech" className="text-sm text-muted-foreground hover:text-foreground">
+                <Link to="/category/Tech" className="text-sm text-muted-foreground hover:text-foreground">
                   Technology
                 </Link>
               </li>
               <li>
-                <Link to="/category/life" className="text-sm text-muted-foreground hover:text-foreground">
+                <Link to="/category/Life" className="text-sm text-muted-foreground hover:text-foreground">
                   Lifestyle
                 </Link>
               </li>
               <li>
-                <Link to="/category/travel" className="text-sm text-muted-foreground hover:text-foreground">
+                <Link to="/category/Travel" className="text-sm text-muted-foreground hover:text-foreground">
                   Travel
                 </Link>
               </li>
               <li>
-                <Link to="/category/education" className="text-sm text-muted-foreground hover:text-foreground">
+                <Link to="/category/Education" className="text-sm text-muted-foreground hover:text-foreground">
                   Education
                 </Link>
               </li>
