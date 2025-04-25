@@ -77,29 +77,33 @@ const Home = () => {
               icon: <Rocket className="size-6" />,
               color: "bg-blue-500/10",
               delay: "100",
+              path: "/category/Tech",
             },
             {
               name: "Lifestyle",
               icon: <Users className="size-6" />,
               color: "bg-green-500/10",
               delay: "200",
+              path: "/category/Life",
             },
             {
               name: "Travel",
               icon: <Layout className="size-6" />,
               color: "bg-yellow-500/10",
               delay: "300",
+              path: "/category/Travel",
             },
             {
               name: "Education",
               icon: <TrendingUp className="size-6" />,
               color: "bg-purple-500/10",
               delay: "400",
+              path: "/category/Education",
             },
           ].map((category) => (
             <Link
               key={category.name}
-              to={`/category/${category.name.toLowerCase()}`}
+              to={`${category.path}`}
               className={`group rounded-xl p-6 ${category.color} hover:scale-105 transition-transform duration-200 animate-fade-right animate-delay-${category.delay}`}
             >
               <div className="flex items-center gap-4">
