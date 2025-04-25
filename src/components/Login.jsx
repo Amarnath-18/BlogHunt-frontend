@@ -47,7 +47,7 @@ const Login = () => {
         <div className="text-center mb-8">
           <h1 className="text-3xl font-bold">Welcome Back</h1>
           <p className="text-muted-foreground mt-2">
-            Sign in to continue to Bloggy
+            Sign in to continue to BlogHunt
           </p>
         </div>
 
