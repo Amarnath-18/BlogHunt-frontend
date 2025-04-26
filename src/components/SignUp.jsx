@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { cn } from '@/lib/utils'
 import api from '@/lib/axios'
 import { UserPlus } from 'lucide-react'
+import FileInput from '@/components/ui/FileInput'
 
 const SignUp = () => {
   const navigate = useNavigate()
@@ -161,16 +162,14 @@ const SignUp = () => {
             <label className="block text-sm font-medium mb-1">
               Profile Picture
             </label>
-            <input
-              type="file"
+            <FileInput
               onChange={handleImageChange}
-              accept="image/jpeg,image/png,image/webp"
-              className="w-full"
-              required
+              helperText="Max size: 1MB. Supported formats: JPEG, PNG, WebP"
+              preview={formData.profilePic ? URL.createObjectURL(formData.profilePic) : null}
+              previewAlt="Profile preview"
+              className="h-24"
+              label="Choose profile picture"
             />
-            <p className="text-xs text-muted-foreground mt-1">
-              Max size: 1MB. Supported formats: JPEG, PNG, WebP
-            </p>
           </div>
 
           <button

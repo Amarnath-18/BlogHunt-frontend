@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import api from '@/lib/axios'
 import { cn } from '@/lib/utils'
+import FileInput from '@/components/ui/FileInput'
 
 const WriteBlog = () => {
   const navigate = useNavigate()
@@ -126,15 +127,12 @@ const WriteBlog = () => {
 
         <div>
           <label className="block text-sm font-medium mb-1">Image (Optional)</label>
-          <input
-            type="file"
+          <FileInput
             onChange={handleImageChange}
-            accept="image/jpeg,image/png,image/webp"
-            className="w-full"
+            helperText="Max size: 1MB. Supported formats: JPEG, PNG, WebP"
+            preview={formData.blogImage ? URL.createObjectURL(formData.blogImage) : null}
+            previewAlt={formData.title || "Blog preview"}
           />
-          <p className="text-xs text-muted-foreground mt-1">
-            Max size: 1MB. Supported formats: JPEG, PNG, WebP
-          </p>
         </div>
 
         <button
