@@ -202,7 +202,7 @@ const Navbar = () => {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden py-4 border-t">
+          <div className="md:hidden py-4 border-t fixed top-20 left-0 right-0 bg-background shadow-lg max-h-[calc(100vh-5rem)] overflow-y-auto">
             <div className="px-4 mb-4">
               {user ? (
                 <div className="flex items-center gap-3">
